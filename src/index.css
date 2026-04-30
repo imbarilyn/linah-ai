@@ -1,1 +1,260 @@
 @import "tailwindcss";
+
+/*these are my custom fonts*/
+/*Load the font files*/
+@font-face {
+    font-family: 'Changa One Italic';
+
+    src: url('@/assets/fonts/CHANGAONEITALIC.woff');
+
+    font-weight: 400;
+
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Changa One Regular';
+
+    src: url('@/assets/fonts/CHANGAONEREGULAR.woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit Bold';
+
+    src: url('@/assets/fonts/OUTFITBOLD.woff');
+
+    font-weight: 700;
+
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Outfit Extra Bold';
+
+    src: url('@/assets/fonts/OUTFITEXTRABOLD.woff');
+
+    font-weight: 800;
+
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Outfit Extra Light';
+
+    src: url('@/assets/fonts/OUTFITEXTRALIGHT.woff');
+
+    font-weight: 200;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit Light';
+
+    src: url('@/assets/fonts/OUTFITLIGHT.woff');
+
+    font-weight: 300;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit Medium';
+
+    src: url('@/assets/fonts/OUTFITMEDIUM.woff');
+
+    font-weight: 500;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit Regular';
+
+    src: url('@/assets/fonts/OUTFITREGULAR.woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit Semi Bold';
+
+    src: url('@/assets/fonts/OUTFITSEMIBOLD.woff');
+
+    font-weight: 600;
+]
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit Black';
+
+    src: url('@/assets/fonts/OUTFITBLACK.woff');
+
+    font-weight: 900;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT SANS Bold';
+
+    src: url('@/assets/fonts/PTSANSBOLD.woff');
+
+    font-weight: 700;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT SANS Bold Italic';
+
+    src: url('@/assets/fonts/PTSANSBOLDITALIC.woff');
+
+    font-weight: 700;
+
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT SANS  Caption Bold';
+
+    src: url('@/assets/fonts/PTSANSCAPTIONBOLD.woff');
+
+    font-weight: 700;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT SANS Caption Regular';
+
+    src: url('@/assets/fonts/PTSANSCAPTION.woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT SANS Italic';
+
+    src: url('@/assets/fonts/PTSANSITALIC.woff');
+
+    font-weight: 400;
+
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT SANS Narrow Bold';
+
+    src: url('@/assets/fonts/PTSANSNARROWBOLD.woff');
+
+    font-weight: 700;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT SANS Narrow Regular';
+
+    src: url('@/assets/fonts/PTSANSNARROW.woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT SANS Regular';
+
+    src: url('@/assets/fonts/PTSANS.woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+
+    src: url('@/assets/fonts/URBANISTREGULAR.woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Urbanist Italic';
+
+    src: url('@/assets/fonts/URBANISTITALIC.woff');
+
+    font-weight: 400;
+
+    font-style: italic;
+}
+
+
+/*Custom themes*/
+@theme {
+    --font-ChangaOneItalic: 'Changa One Italic';
+    --font-ChangaOneRegular: 'Changa One Regular';
+    --font-OutfitBold: 'Outfit Bold';
+    --font-OutfitExtraBold: 'Outfit Extra Bold';
+    --font-OutfitExtraLight: 'Outfit Extra Light';
+    --font-OutfitLight: 'Outfit Light';
+    --font-OutfitMedium: 'Outfit Medium';
+    --font-OutfitRegular: 'Outfit Regular';
+    --font-OutfitSemiBold: 'Outfit Semi Bold';
+    --font-OutfitBlack: 'Outfit Black';
+    --font-PTSANSBold: 'PT SANS Bold';
+    --font-PTSANSBoldItalic: 'PT SANS Bold Italic';
+    --font-PTSANSCaptionBold: 'PT SANS  Caption Bold';
+    --font-PTANSCaptionRegular: 'PT SANS Caption Regular';
+    --font-PTSANSItalic: 'PT SANS Italic';
+    --font-PTSANSNarrowBold: 'PT SANS Narrow Bold';
+    --font-PTSANSNarrowRegular: 'PT SANS Narrow Regular';
+    --font-PTSANSRegular: 'PT SANS Regular';
+    --font-Urbanist: 'Urbanist';
+    --font-UrbanistItalic: 'Urbanist Italic'
+}
+
+/*custom colors*/
+@theme {
+    --color-casablanca-50: #fef6ee;
+    --color-casablanca100: #fcead8;
+    --color-casablanca-200: #f8d1b0;
+    --color-casablanca-300: #f4af7d;
+    --color-casablanca-400: #ee8449;
+    --color-casablanca-500: #eb6e33;
+    --color-casablanca-600: #db4c1b;
+    --color-casablanca-700: #b63818;
+    --color-casablanca-800: #912e1b;
+    --color-casablanca-900: #752919;
+    --color-casablanca-950: #3f110b;
+
+
+    --color-eggplant-50: #fff2fe;
+    --color-eggplant-100: #ffe4ff;
+    --color-eggplant-200: #ffc9fd;
+    --color-eggplant-300: #ff9ef9;
+    --color-eggplant-400: #ff64f3;
+    --color-eggplant-500: #ff2bf6;
+    --color-eggplant-600: #ef0aeb;
+    --color-eggplant-700: #c704bf;
+    --color-eggplant-800: #a4069c;
+    --color-eggplant-900: #840b7c;
+    --color-eggplant-950: #5a0054;
+    --color-dark-one: #222222;
+    --color-dark-two: #252525;
+}
