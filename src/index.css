@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 /*these are my custom fonts*/
 /*Load the font files*/
