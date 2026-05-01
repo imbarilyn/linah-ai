@@ -1,5 +1,3 @@
-
-import './App.css'
 import ChatPage from "./chatbot/ChatPage.tsx";
 
 function App() {
