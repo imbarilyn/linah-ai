@@ -9,10 +9,10 @@ export default defineConfig({
       tailwindcss()
   ],
     base: process.env.VITE_BASE_PATH || '/linah-ai',
+    root: './',
     resolve: {
         alias:{
             '@': fileURLToPath(new URL('./src', import.meta.url))
-        },
-
+        }
     }
 })
