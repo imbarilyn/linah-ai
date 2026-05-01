@@ -1,6 +1,6 @@
 
 
-const AIChatBubble = ({message}: {message: string}) => {
+const AIChatBubble = ({message, isError,  isLoading}: {message: string, isError: boolean, isLoading: boolean},  ) => {
     return (
         <div className="flex 'justify-end'">
             <div
