@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# Linah AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive AI chatbot interface built with React and TypeScript. Linah AI allows users to interact with an AI assistant about professions, experiences, and projects through a sleek chat interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Real-time Chat Interface**: Seamless conversation with the AI assistant
+- **Markdown Support**: Rich text rendering with syntax highlighting
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Dark Theme**: Modern dark UI with Tailwind CSS and DaisyUI
+- **Secure Input**: XSS protection with DOMPurify
+- **Streaming Responses**: Smooth loading animations during AI responses
+- **Custom Fonts**: Unique typography with custom font assets
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS 4, DaisyUI
+- **Icons**: Lucide React
+- **Markdown Processing**: Marked, Highlight.js
+- **Security**: DOMPurify
+- **Utilities**: UUID for unique message IDs
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/linah-ai.git
+   cd linah-ai
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint for code quality checks
+
+## Project Structure
+
+```
+src/
+├── chatbot/
+│   ├── ChatPage.tsx          # Main chat interface
+│   └── UserInput.tsx         # User input component
+├── components/
+│   ├── AIChatBubble.tsx      # AI message bubble
+│   ├── UserChatBubble.tsx    # User message bubble
+│   └── ErrorScreen.tsx       # Error display component
+├── modules/
+│   └── markdownParser.ts     # Custom markdown renderer
+├── services/
+│   └── api.ts                # API communication service
+├── assets/
+│   ├── fonts/                # Custom font files
+│   ├── images/               # Logo and images
+│   └── material-icons/       # Material icons
+└── App.tsx                   # Main app component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## API Integration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The app communicates with an AI service via the `sendUserMessage` function in `src/services/api.ts`. Ensure the API endpoint is properly configured for full functionality.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request
+
+## License
+
+This project is private and not licensed for public use.
+
+## Acknowledgments
+
+- Built with [Vite](https://vitejs.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- UI components from [DaisyUI](https://daisyui.com/)
