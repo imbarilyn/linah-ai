@@ -9,7 +9,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors *"
+          "value": "frame-ancestors 'self' https://linah-ai-git-main-imbarilyns-projects.vercel.app/"
         }
       ]
     }
