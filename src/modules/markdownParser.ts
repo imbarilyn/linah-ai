@@ -1,12 +1,13 @@
 import {marked, type RendererObject, type Tokens} from 'marked'
+import hljs from 'highlight.js'
 
 export const renderer: RendererObject = {
     link({href, title, text}: Tokens.Link) {
         return `<a target="_blank" class="link link-primary" href="${href}" title="${title}">${text}</a>`
     },
-    table({header: hd, rows, align}: Tokens.Table) {
+    table({header: hd, rows}: Tokens.Table) {
         const header = hd
-            .map(({text, header}) => {
+            .map(({text}) => {
                 return `
       <th class="text-base-content text-large">${marked.parseInline(text)}</th>
     `
@@ -17,7 +18,7 @@ export const renderer: RendererObject = {
             .map((row) => {
                 return `
       <tr>${row
-                    .map(({text, header}) => {
+                    .map(({text}) => {
                         return `
         <td class="text-base-content text-large">${marked.parseInline(text)}</td>
       `
@@ -52,7 +53,7 @@ export const renderer: RendererObject = {
     //   <td>${content}</td>
     // `
     // },
-    code({text: code, lang: language, codeBlockStyle, escaped}: Tokens.Code) {
+    code({text: code, lang: language}: Tokens.Code) {
         // return `
         //   <pre><div class="mockup-code my-3"><div class="px-4"><code>${code}</code></div></div></pre>
         // `;
@@ -77,10 +78,10 @@ export const renderer: RendererObject = {
   `
         }
     },
-    list({ordered, start, loose, items}: Tokens.List) {
+    list({ordered, start, items}: Tokens.List) {
         // console.log('items is -> ', items)
         const body = items
-            .map(({task, checked, loose, text}) => {
+            .map(({text}) => {
                 return `
       <li class="text-base-accent text-large">${marked.parseInline(text)}</li>
       `
@@ -108,12 +109,12 @@ export const renderer: RendererObject = {
     `
         }
     },
-    listitem({task, checked, loose, text}: Tokens.ListItem) {
+    listitem({text}: Tokens.ListItem) {
         return `
     <li class="text-base-accent text-small">${marked.parseInline(text)}</li>
   `
     },
-    paragraph({text, pre}: Tokens.Paragraph) {
+    paragraph({text}: Tokens.Paragraph) {
         return `
     <p class="text-base-accent leading-relaxed text-small">${marked.parseInline(text)}</p>
   `
