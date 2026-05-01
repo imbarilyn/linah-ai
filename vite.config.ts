@@ -8,7 +8,6 @@ export default defineConfig({
       react(),
       tailwindcss()
   ],
-    base: process.env.VITE_BASE_PATH || '/linah-ai',
     resolve: {
         alias:{
             '@': fileURLToPath(new URL('./src', import.meta.url))
